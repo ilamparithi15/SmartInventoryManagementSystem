@@ -1,0 +1,4 @@
+# Directories for inventory and archive data
+inventory/
+archive/
+monitor_log.txt

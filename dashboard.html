@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Inventory Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="SmartInventoryManagementSystem\dashboard.css" />
+</head>
+<body>
+
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="sidebar text-white p-3">
+    <h4 class="mb-4">Inventory System</h4>
+    <ul class="nav flex-column">
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">Add Item</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">Categories</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Page Content -->
+  <div class="container-fluid p-4 content-area">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3>Inventory Overview</h3>
+      <div>
+        <select class="form-select" style="width: 200px;" id="categoryFilter">
+          <option value="All">All Categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Clothing">Clothing</option>
+        </select>
+      </div>
+    </div>
+
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Item Name</th>
+          <th>Quantity</th>
+          <th>Category</th>
+          <th>Location</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="inventoryTable">
+        <tr data-category="Electronics">
+          <td>Monitor</td>
+          <td>20</td>
+          <td>Electronics</td>
+          <td>Warehouse A</td>
+          <td><a href="edit.html" class="btn btn-sm btn-outline-primary">Edit</a></td>
+        </tr>
+        <tr data-category="Furniture">
+          <td>Office Chair</td>
+          <td>50</td>
+          <td>Furniture</td>
+          <td>Warehouse B</td>
+          <td><a href="edit.html" class="btn btn-sm btn-outline-primary">Edit</a></td>
+        </tr>
+        <tr data-category="Clothing">
+          <td>T-Shirts</td>
+          <td>150</td>
+          <td>Clothing</td>
+          <td>Warehouse C</td>
+          <td><a href="edit.html" class="btn btn-sm btn-outline-primary">Edit</a></td>
+        </tr>
+        <tr data-category="Electronics">
+          <td>Keyboard</td>
+          <td>80</td>
+          <td>Electronics</td>
+          <td>Warehouse A</td>
+          <td><a href="edit.html" class="btn btn-sm btn-outline-primary">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  const categoryFilter = document.getElementById('categoryFilter');
+  const rows = document.querySelectorAll('#inventoryTable tr');
+
+  categoryFilter.addEventListener('change', function () {
+    const selected = this.value;
+    rows.forEach(row => {
+      const category = row.getAttribute('data-category');
+      row.style.display = (selected === "All" || category === selected) ? "" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>

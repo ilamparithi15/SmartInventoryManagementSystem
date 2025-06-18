@@ -20,16 +20,25 @@ function updateForm(event) {
     }
 
   if(qty<=0){
-    alert("The quantity should not be Zero and less than that");
+    alert("The quantity should not be empty and no -ve stocking🎀");
+    return; 
   }
 
+  else if(qty<10){
+        alert("The Quantity is Low, must be more than 10");
+        return;
+    }
 
-  currentRow.querySelector(".item").textContent = item;
-  currentRow.querySelector(".qty").textContent = qty;
-  currentRow.querySelector(".category").textContent = category;
-  currentRow.querySelector(".location").textContent = location;
+  else{
+    currentRow.querySelector(".item").textContent = item;
+    currentRow.querySelector(".qty").textContent = qty;
+    currentRow.querySelector(".category").textContent = category;
+    currentRow.querySelector(".location").textContent = location;
 
-  document.getElementById("editform").style.display = "none";
-  document.getElementById("main-part1").style.display = "block";
-  document.getElementById("main-part2").style.display = "block";
+    document.getElementById("editform").style.display = "none";
+    document.getElementById("main-part1").style.display = "block";
+    document.getElementById("main-part2").style.display = "block";
+  }
+
+  
 }

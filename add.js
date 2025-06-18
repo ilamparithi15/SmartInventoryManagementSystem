@@ -16,11 +16,13 @@ function addForm(event){
     }
 
     if(qty<=0){
-    alert("The quantity should not be Zero and less than that");
-    }
+    alert("The quantity should not be empty and no -ve stocking🎀");
+    return; 
+  }
 
-    if(qty<10){
+    else if(qty<10){
         alert("The Quantity is Low, must be more than 10");
+        return;
     }
     
     else{

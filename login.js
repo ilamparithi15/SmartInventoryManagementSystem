@@ -52,3 +52,9 @@ function closeform(event) {
   }
   
 }
+
+document.getElementById('newUserLink').addEventListener('click', function (e) {
+  e.preventDefault();
+  var signupTab = new bootstrap.Tab(document.querySelector('#signup-tab'));
+  signupTab.show();
+});

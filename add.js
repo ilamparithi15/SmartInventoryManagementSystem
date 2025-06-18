@@ -14,6 +14,14 @@ function addForm(event){
         alert("Fill all the fields to add");
         return; 
     }
+
+    if(qty<=0){
+    alert("The quantity should not be Zero and less than that");
+    }
+
+    if(qty<10){
+        alert("The Quantity is Low, must be more than 10");
+    }
     
     else{
         const tableBody = document.getElementById("inventoryTable");

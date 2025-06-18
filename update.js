@@ -8,10 +8,21 @@ function updateForm(event) {
     return;
   }
 
+
   const item = document.getElementById("item").value.trim();
   const qty = document.getElementById("qty").value.trim();
   const category = document.getElementById("category").value.trim();
   const location = document.getElementById("location").value.trim();
+
+  if (item === "" || qty === "" || category === "" || location === "") {
+        alert("Fill all the fields to add");
+        return; 
+    }
+
+  if(qty<=0){
+    alert("The quantity should not be Zero and less than that");
+  }
+
 
   currentRow.querySelector(".item").textContent = item;
   currentRow.querySelector(".qty").textContent = qty;

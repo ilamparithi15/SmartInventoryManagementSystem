@@ -1,0 +1,48 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #764ba2;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #764ba2;
+  color: #fff;
+  border: none;
+}
+
+.nav-tabs .nav-link {
+  color: #764ba2;
+  border: none;
+}
+
+.forgot-link {
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: #764ba2;
+  border-color: #764ba2;
+}
+
+.btn-primary:hover {
+  background-color: #5a388c;
+  border-color: #5a388c;
+}

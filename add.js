@@ -29,6 +29,9 @@ function addForm(event){
         const tableBody = document.getElementById("inventoryTable");
 
         const newRow = document.createElement("tr");
+
+        newRow.setAttribute("data-category", category);
+
         newRow.innerHTML = `
         <td class="item">${item}</td>
         <td class="qty">${qty}</td>
@@ -41,6 +44,7 @@ function addForm(event){
         `;
 
         tableBody.appendChild(newRow); 
+
 
         document.getElementById("addItemForm").reset();
 

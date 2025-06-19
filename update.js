@@ -35,6 +35,8 @@ function updateForm(event) {
     currentRow.querySelector(".category").textContent = category;
     currentRow.querySelector(".location").textContent = location;
 
+    currentRow.setAttribute("data-category", category);
+
     document.getElementById("editform").style.display = "none";
     document.getElementById("main-part1").style.display = "block";
     document.getElementById("main-part2").style.display = "block";
@@ -42,3 +44,4 @@ function updateForm(event) {
 
   
 }
+

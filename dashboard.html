@@ -108,7 +108,12 @@
           <option value="Electronics">Electronics</option>
           <option value="Furniture">Furniture</option>
           <option value="Clothing">Clothing</option>
+          <option value="Others">Others</option>
         </select>
+        <div id="othercategory" style="display: none;">
+          <br>
+          <input type="text" class="form-control" id="customCategoryInput" placeholder="Enter the new category" >
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label">Location</label>
@@ -136,7 +141,12 @@
           <option value="Electronics">Electronics</option>
           <option value="Furniture">Furniture</option>
           <option value="Clothing">Clothing</option>
+          <option value="Others">Others</option>
         </select>
+        <div id="newcategory" style="display: none;">
+          <br>
+          <input type="text" class="form-control" id="newcustomCategoryInput" placeholder="Enter the new category" >
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label">Location</label>
@@ -150,11 +160,11 @@
 </div>
 
 <script>
-  const categoryFilter = document.getElementById('categoryFilter');
-  const rows = document.querySelectorAll('#inventoryTable tr');
 
+  const categoryFilter = document.getElementById('categoryFilter');
   categoryFilter.addEventListener('change', function () {
     const selected = this.value;
+    const rows = document.querySelectorAll('#inventoryTable tr');
     rows.forEach(row => {
       const category = row.getAttribute('data-category');
       row.style.display = (selected === "All" || category === selected) ? "" : "none";

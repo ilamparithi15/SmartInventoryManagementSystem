@@ -1,4 +1,4 @@
- var currentRow = null;
+var currentRow = null;
 
 function updateForm(event) {
   event.preventDefault();
@@ -11,8 +11,26 @@ function updateForm(event) {
 
   const item = document.getElementById("item").value.trim();
   const qty = document.getElementById("qty").value.trim();
-  const category = document.getElementById("category").value.trim();
   const location = document.getElementById("location").value.trim();
+  let category = document.getElementById("category").value.trim();
+  const customCategoryValue = document.getElementById("customCategoryInput").value.trim();
+
+  if (category === "Others") {
+    if (customCategoryValue === "") {
+      alert("Please enter a new category.");
+      return;
+    }
+    category = customCategoryValue;
+
+    const filterDropdown = document.getElementById("categoryFilter");
+    let exists = Array.from(filterDropdown.options).some(opt => opt.value === category);
+    if (!exists) {
+      const newOption = document.createElement("option");
+      newOption.value = category;
+      newOption.textContent = category;
+      filterDropdown.appendChild(newOption);
+    }
+  }
 
   if (item === "" || qty === "" || category === "" || location === "") {
         alert("Fill all the fields to add");
@@ -44,4 +62,3 @@ function updateForm(event) {
 
   
 }
-

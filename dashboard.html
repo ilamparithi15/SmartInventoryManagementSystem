@@ -153,8 +153,8 @@
   const categoryFilter = document.getElementById('categoryFilter');
   categoryFilter.addEventListener('change', function () {
     const selected = this.value;
+    const rows = document.querySelectorAll('#inventoryTable tr');
     rows.forEach(row => {
-      const rows = document.querySelectorAll('#inventoryTable tr');
       const category = row.getAttribute('data-category');
       row.style.display = (selected === "All" || category === selected) ? "" : "none";
     });

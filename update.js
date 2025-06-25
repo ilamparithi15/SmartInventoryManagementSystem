@@ -22,6 +22,7 @@ function updateForm(event) {
     }
     category = customCategoryValue;
 
+
     const filterDropdown = document.getElementById("categoryFilter");
     let exists = Array.from(filterDropdown.options).some(opt => opt.value === category);
     if (!exists) {

@@ -43,7 +43,7 @@ function updateForm(event) {
     return; 
   }
 
-  else if(qty<10){
+  else if(qty<11){
         alert("The Quantity is Low, must be more than 10");
         return;
     }

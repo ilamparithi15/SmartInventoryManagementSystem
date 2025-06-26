@@ -1,6 +1,5 @@
+package com.example;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 // Sealed Interface
 public sealed interface Entity permits Product, Stock, RestockRequest {}

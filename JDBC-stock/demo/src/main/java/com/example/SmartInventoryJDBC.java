@@ -1,13 +1,24 @@
-import java.sql.*;
+package com.example;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class SmartInventoryJDBC {
 
+    private static final Logger logger = LoggerFactory.getLogger(SmartInventoryJDBC.class);
+
     // Step 1: Oracle DB credentials
-    private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
+    private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:ORCL";
     private static final String DB_USER = "system";
-    private static final String DB_PASSWORD = "password";
+    private static final String DB_PASSWORD = "admin123";
 
     // Step 2: Get connection
     public static Connection getConnection() throws SQLException {
@@ -21,15 +32,16 @@ public class SmartInventoryJDBC {
             ps.setInt(1, newQuantity);
             ps.setInt(2, productId);
             int rows = ps.executeUpdate();
-            System.out.println("Updated stock for Product ID: " + productId + " | Rows affected: " + rows);
+            logger.info("Updated stock for Product ID: " + productId + " | Rows affected: " + rows);
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred while updating product stock", e);
         }
     }
 
-    // Step 4: Insert into STOCK_MOVEMENTS table
+    // // Step 4: Insert into STOCK_MOVEMENTS table
     public static void logStockMovement(int productId, String type, int qty, String src, String dest, String user) {
-        String sql = "INSERT INTO STOCK_MOVEMENTS (MOVEMENT_ID, PRODUCT_ID, MOVEMENT_TYPE, QUANTITY, MOVEMENT_DATE, SOURCE_LOCATION, DESTINATION_LOCATION, RECORDED_BY) " +
+        String sql = "INSERT INTO STOCK_MOVEMENTS (MOVEMENT_ID, PRODUCT_ID, MOVEMENT_TYPE, QUANTITY, MOVEMENT_DATE, SOURCE_LOCATION, DESTINATION_LOCATION, RECORDED_BY) "
+                +
                 "VALUES (movement_seq.NEXTVAL, ?, ?, ?, SYSTIMESTAMP, ?, ?, ?)";
         try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setInt(1, productId);
@@ -39,9 +51,9 @@ public class SmartInventoryJDBC {
             ps.setString(5, dest);
             ps.setString(6, user);
             ps.executeUpdate();
-            System.out.println("Logged " + type + " movement for Product ID: " + productId);
+            logger.info("Logged " + type + " movement for Product ID: " + productId);
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred while inserting product stock", e);
         }
     }
 
@@ -60,18 +72,18 @@ public class SmartInventoryJDBC {
                         rs.getString("CATEGORY"),
                         rs.getDouble("UNIT_PRICE"),
                         rs.getString("SUPPLIER"),
-                        rs.getInt("CURRENT_STOCK_QUANTITY")
-                );
+                        rs.getInt("CURRENT_STOCK_QUANTITY"));
                 lowStockList.add(p);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error("An error occurred while selecting product stock", e);
         }
         return lowStockList;
     }
 
     // Step 6: Main testing
     public static void main(String[] args) {
+
         int testProductId = 101;
 
         // 1. Update product stock
@@ -80,11 +92,10 @@ public class SmartInventoryJDBC {
         // 2. Log stock movement
         logStockMovement(testProductId, "IN", 20, "SupplierA", "WarehouseA", "admin");
 
-        // 3. Query low stock items
-        System.out.println("\nLow Stock Items:");
         List<Product> lowStock = getLowStockProducts(60);
         for (Product p : lowStock) {
-            System.out.println(p.productName() + " (Qty: " + p.currentStockQuantity() + ")");
+            logger.warn("The Quantity of " + p.productName() +" is Less" + " (Qty: " + p.currentStockQuantity() + ")" );
         }
+        System.exit(0);
     }
 }

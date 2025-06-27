@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #dbeafe, #e0f2fe); /* Light blue gradient */
+}
+
+#wrapper {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+}
+
+.sidebar .nav-link:hover {
+  text-decoration: underline;
+}
+
+.content-area {
+  flex-grow: 1;
+  background-color: transparent;
+}
+
+.table {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dashboard-h3{
+  margin-bottom: 1rem;
+  color: black;
+}
+
+/*-- Edit Form --*/
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 4rem;
+  max-width: 600px;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+  color: #2563eb;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.25);
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
+
+.btn-secondary {
+  margin-left: 10px;
+  background-color: #64748b;
+  border-color: #64748b;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+  border-color: #475569;
+}

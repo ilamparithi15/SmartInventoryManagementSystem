@@ -1,3 +1,4 @@
+package com.example;
 import java.sql.Timestamp;
 
 public record RestockRequest(

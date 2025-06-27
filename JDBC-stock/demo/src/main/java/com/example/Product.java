@@ -1,3 +1,4 @@
+package com.example;
 public record Product(
         int productId,
         String productName,

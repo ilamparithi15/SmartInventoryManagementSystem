@@ -708,3 +708,166 @@ https://docs.oracle.com/error-help/db/ora-12505/
 2025-06-26 22:15:48,260 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
 2025-06-26 22:15:48,421 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
 2025-06-26 22:15:48,869 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The Quantity of Sample Product is Less (Qty: 50)
+2025-06-27 11:40:01,850 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-27 11:40:01,972 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
+2025-06-27 11:40:02,167 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The Quantity of Sample Product is Less (Qty: 50)
+2025-06-27 12:32:14,623 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while updating the products 
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=mrs0oYwCTiaBwNzJmkzGuw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.updateProductStock(SmartInventoryJDBC.java:28) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:135) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=mrs0oYwCTiaBwNzJmkzGuw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:14,762 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while inserting the products in STOCK_MOVEMENTS table 
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=4C16/Be8SsaeCxr1i2yZJQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:42) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:136) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=4C16/Be8SsaeCxr1i2yZJQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:14,764 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-27 12:32:14,910 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while selecting the products from PRODUCTS Table
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=yHQAoDGBQbyNUxzQu8y2AQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getLowStockProducts(SmartInventoryJDBC.java:60) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:139) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=yHQAoDGBQbyNUxzQu8y2AQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:14,914 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Stock Movements:
+2025-06-27 12:32:15,077 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while selecting the products from STOCK_MOVEMENTS table 
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=mkOLhjEEReWlOTxNNWdUEw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getAllStockMovements(SmartInventoryJDBC.java:85) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:144) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=mkOLhjEEReWlOTxNNWdUEw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:15,079 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Restock Requests:
+2025-06-27 12:32:15,249 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while selecting the products from RESTOCK_REQUESTS table 
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=fWH5HZItQgqZ3Nnxp632ng==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getAllRestockRequests(SmartInventoryJDBC.java:110) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:149) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=fWH5HZItQgqZ3Nnxp632ng==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:44,604 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-27 12:32:44,816 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
+2025-06-27 12:32:44,821 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-27 12:32:45,129 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The quantity of Sample Product (Qty: 50) is low
+2025-06-27 12:32:45,129 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Stock Movements:
+2025-06-27 12:32:45,424 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:32:45,425 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:32:45,425 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:32:45,425 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:32:45,426 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Restock Requests:
+2025-06-27 12:32:45,490 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Qty: 30, Status: Pending
+2025-06-27 12:36:30,628 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-27 12:36:30,740 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
+2025-06-27 12:36:30,742 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-27 12:36:30,923 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The quantity of Sample Product (Qty: 50) is low
+2025-06-27 12:36:30,923 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Stock Movements:
+2025-06-27 12:36:31,079 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,080 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,080 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,080 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,081 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,081 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Restock Requests:
+2025-06-27 12:36:31,234 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Qty: 30, Status: Pending

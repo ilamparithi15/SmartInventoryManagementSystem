@@ -1,0 +1,6 @@
+com\example\SmartInventoryJDBC.class
+com\example\RestockRequest.class
+com\example\App.class
+com\example\Entity.class
+com\example\Product.class
+com\example\Stock.class

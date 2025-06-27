@@ -1,0 +1,873 @@
+2025-06-26 19:42:47,372 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - {}
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID xe is not registered with the listener at host localhost port 1521. (CONNECTION_ID=RIx58AZEQ6SqO/pqFM6YCg==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.updateProductStock(SmartInventoryJDBC.java:26) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:84) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID xe is not registered with the listener at host localhost port 1521. (CONNECTION_ID=RIx58AZEQ6SqO/pqFM6YCg==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 19:42:47,676 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - {}
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID xe is not registered with the listener at host localhost port 1521. (CONNECTION_ID=WALF7bU3RkKqfjVDajxG/w==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:40) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:87) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID xe is not registered with the listener at host localhost port 1521. (CONNECTION_ID=WALF7bU3RkKqfjVDajxG/w==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 19:42:47,681 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 19:42:48,049 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - {}
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID xe is not registered with the listener at host localhost port 1521. (CONNECTION_ID=d075kjGpRy24rUtLcgxvNw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getLowStockProducts(SmartInventoryJDBC.java:58) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:91) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID xe is not registered with the listener at host localhost port 1521. (CONNECTION_ID=d075kjGpRy24rUtLcgxvNw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 19:45:02,272 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - {}
+java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+https://docs.oracle.com/error-help/db/ora-00942/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.updateProductStock(SmartInventoryJDBC.java:29) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:84) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00942: table or view does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 19:45:02,422 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - {}
+java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+https://docs.oracle.com/error-help/db/ora-00942/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:47) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:87) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00942: table or view does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 19:45:02,425 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 19:45:02,531 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - {}
+java.sql.SQLSyntaxErrorException: ORA-00942: table or view does not exist
+
+https://docs.oracle.com/error-help/db/ora-00942/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:1257) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.prepareDefineBufferAndExecute(OracleStatement.java:1424) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLSelect(OracleStatement.java:1855) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1631) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:4160) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1120) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.getLowStockProducts(SmartInventoryJDBC.java:60) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:91) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00942: table or view does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 20:08:17,758 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 20:08:17,961 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - {}
+java.sql.SQLSyntaxErrorException: ORA-02289: sequence does not exist
+
+https://docs.oracle.com/error-help/db/ora-02289/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:47) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:87) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02289: sequence does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 20:08:17,986 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 20:13:51,446 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 20:13:51,722 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+https://docs.oracle.com/error-help/db/ora-02291/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:47) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:87) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 20:13:51,744 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 20:26:38,315 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 20:26:38,432 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+https://docs.oracle.com/error-help/db/ora-02291/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:47) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:87) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 20:26:38,440 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 20:27:44,261 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 20:27:44,395 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+https://docs.oracle.com/error-help/db/ora-02291/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:34) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:87) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 20:27:44,406 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 20:28:28,665 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 20:28:28,724 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+https://docs.oracle.com/error-help/db/ora-02291/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:34) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:87) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 20:28:28,734 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 20:29:16,484 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+https://docs.oracle.com/error-help/db/ora-02291/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:34) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:84) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 20:29:16,551 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 20:29:16,553 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 20:30:00,228 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLIntegrityConstraintViolationException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+https://docs.oracle.com/error-help/db/ora-02291/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:715) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:615) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1372) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:237) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:524) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:298) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1510) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:2020) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1633) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3973) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.doExecuteLargeUpdate(OraclePreparedStatement.java:4339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeLargeUpdate(OraclePreparedStatement.java:4316) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:4291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1007) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:34) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:84) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-02291: integrity constraint (SYSTEM.FK_PRODUCT_ID) violated - parent key not found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:723) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 18 more
+2025-06-26 20:30:00,289 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 20:30:00,291 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-26 20:57:14,298 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLException: ORA-12541: Cannot connect. No listener at host localhost port 1521. (CONNECTION_ID=lgh7kecYQ8WTxnFxfwWLPQ==)
+https://docs.oracle.com/error-help/db/ora-12541/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:27) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:85) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12541: Cannot connect. No listener at host localhost port 1521. (CONNECTION_ID=lgh7kecYQ8WTxnFxfwWLPQ==)
+https://docs.oracle.com/error-help/db/ora-12541/
+	at oracle.net.nt.TcpNTAdapter.handleEstablishSocketException(TcpNTAdapter.java:418) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:350) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:228) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:346) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:1266) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:787) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:721) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:341) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishTimedConnect(SocketChannelImpl.java:1196) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.blockingConnect(SocketChannelImpl.java:1238) ~[?:?]
+	at java.base/sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:102) ~[?:?]
+	at oracle.net.nt.TimeoutSocketChannel.doConnect(TimeoutSocketChannel.java:291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.initializeSocketChannel(TimeoutSocketChannel.java:271) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:238) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:205) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:228) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:346) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:1266) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:787) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:721) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:341) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 20:57:14,329 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while updating product stock
+java.sql.SQLException: ORA-12541: Cannot connect. No listener at host localhost port 1521. (CONNECTION_ID=50/QlDKCR7mH5Wgpx0uBUA==)
+https://docs.oracle.com/error-help/db/ora-12541/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.updateProductStock(SmartInventoryJDBC.java:44) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:89) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12541: Cannot connect. No listener at host localhost port 1521. (CONNECTION_ID=50/QlDKCR7mH5Wgpx0uBUA==)
+https://docs.oracle.com/error-help/db/ora-12541/
+	at oracle.net.nt.TcpNTAdapter.handleEstablishSocketException(TcpNTAdapter.java:418) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:350) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:228) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:346) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:1266) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:787) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:721) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:341) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishTimedConnect(SocketChannelImpl.java:1196) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.blockingConnect(SocketChannelImpl.java:1238) ~[?:?]
+	at java.base/sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:102) ~[?:?]
+	at oracle.net.nt.TimeoutSocketChannel.doConnect(TimeoutSocketChannel.java:291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.initializeSocketChannel(TimeoutSocketChannel.java:271) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:238) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:205) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:228) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:346) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:1266) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:787) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:721) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:341) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 20:57:14,341 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while selecting product stock
+java.sql.SQLException: ORA-12541: Cannot connect. No listener at host localhost port 1521. (CONNECTION_ID=/hy2FtiCSpuG7/UrKH1isA==)
+https://docs.oracle.com/error-help/db/ora-12541/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getLowStockProducts(SmartInventoryJDBC.java:58) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:91) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12541: Cannot connect. No listener at host localhost port 1521. (CONNECTION_ID=/hy2FtiCSpuG7/UrKH1isA==)
+https://docs.oracle.com/error-help/db/ora-12541/
+	at oracle.net.nt.TcpNTAdapter.handleEstablishSocketException(TcpNTAdapter.java:418) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:350) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:228) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:346) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:1266) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:787) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:721) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:341) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishTimedConnect(SocketChannelImpl.java:1196) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.blockingConnect(SocketChannelImpl.java:1238) ~[?:?]
+	at java.base/sun.nio.ch.SocketAdaptor.connect(SocketAdaptor.java:102) ~[?:?]
+	at oracle.net.nt.TimeoutSocketChannel.doConnect(TimeoutSocketChannel.java:291) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.initializeSocketChannel(TimeoutSocketChannel.java:271) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:238) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:205) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:339) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:228) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:346) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:1266) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:787) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:721) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:972) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:341) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 21:06:15,977 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=1r+U5m3+Rviq8si0fz9u1g==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:27) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:85) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=1r+U5m3+Rviq8si0fz9u1g==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 21:06:16,596 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while updating product stock
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=YQdwmtWsSVGKCKrKjgU3KA==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.updateProductStock(SmartInventoryJDBC.java:44) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:89) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=YQdwmtWsSVGKCKrKjgU3KA==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 21:06:16,775 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while selecting product stock
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=3P1m0U2hQlG1P0EFyqu8rQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getLowStockProducts(SmartInventoryJDBC.java:58) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:91) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=3P1m0U2hQlG1P0EFyqu8rQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 21:06:55,807 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while inserting product stock
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=5Nq9YPKjQje8QbBhO+c2wQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:27) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:85) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=5Nq9YPKjQje8QbBhO+c2wQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 21:06:55,954 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while updating product stock
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=OJE8nOK/TA2rBqbDSwv2sg==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.updateProductStock(SmartInventoryJDBC.java:44) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:89) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=OJE8nOK/TA2rBqbDSwv2sg==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 21:06:56,115 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - An error occurred while selecting product stock
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=tWhypieER5i4mir3i/0krQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:20) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getLowStockProducts(SmartInventoryJDBC.java:58) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:91) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID ORCL is not registered with the listener at host localhost port 1521. (CONNECTION_ID=tWhypieER5i4mir3i/0krQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-26 21:29:33,131 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:35:18,377 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:38:19,072 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:41:03,993 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:41:03,999 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Checking DB connection...
+2025-06-26 21:41:04,065 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - DB is responsive.
+2025-06-26 21:41:29,157 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:41:29,162 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Checking DB connection...
+2025-06-26 21:41:29,211 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - DB is responsive.
+2025-06-26 21:41:55,448 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:41:55,452 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Checking DB connection...
+2025-06-26 21:41:55,522 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - DB is responsive.
+2025-06-26 21:42:28,559 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:42:28,564 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Checking DB connection...
+2025-06-26 21:56:31,947 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:58:07,469 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:58:08,427 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - The quantity
+2025-06-26 21:59:10,007 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:59:10,560 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - The quantity
+2025-06-26 21:59:47,654 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 21:59:48,152 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - The quantity
+2025-06-26 22:04:06,068 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 22:04:06,661 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - The quantity
+2025-06-26 22:04:50,458 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 22:05:28,022 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 22:06:34,414 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 0
+2025-06-26 22:10:44,996 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-26 22:10:45,566 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Sample Product (Qty: 50)The Quantity is Less
+2025-06-26 22:12:47,659 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-26 22:12:48,174 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The Quantity of Sample Product is Less (Qty: 50)
+2025-06-26 22:13:50,488 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-26 22:13:50,504 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Checking DB connection...
+2025-06-26 22:13:50,796 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
+2025-06-26 22:13:51,299 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The Quantity of Sample Product is Less (Qty: 50)
+2025-06-26 22:15:48,260 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-26 22:15:48,421 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
+2025-06-26 22:15:48,869 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The Quantity of Sample Product is Less (Qty: 50)
+2025-06-27 11:40:01,850 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-27 11:40:01,972 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
+2025-06-27 11:40:02,167 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The Quantity of Sample Product is Less (Qty: 50)
+2025-06-27 12:32:14,623 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while updating the products 
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=mrs0oYwCTiaBwNzJmkzGuw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.updateProductStock(SmartInventoryJDBC.java:28) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:135) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=mrs0oYwCTiaBwNzJmkzGuw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:14,762 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while inserting the products in STOCK_MOVEMENTS table 
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=4C16/Be8SsaeCxr1i2yZJQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.logStockMovement(SmartInventoryJDBC.java:42) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:136) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=4C16/Be8SsaeCxr1i2yZJQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:14,764 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-27 12:32:14,910 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while selecting the products from PRODUCTS Table
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=yHQAoDGBQbyNUxzQu8y2AQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getLowStockProducts(SmartInventoryJDBC.java:60) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:139) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=yHQAoDGBQbyNUxzQu8y2AQ==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:14,914 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Stock Movements:
+2025-06-27 12:32:15,077 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while selecting the products from STOCK_MOVEMENTS table 
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=mkOLhjEEReWlOTxNNWdUEw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getAllStockMovements(SmartInventoryJDBC.java:85) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:144) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=mkOLhjEEReWlOTxNNWdUEw==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:15,079 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Restock Requests:
+2025-06-27 12:32:15,249 [com.example.SmartInventoryJDBC.main()] ERROR com.example.SmartInventoryJDBC - The error occurred while selecting the products from RESTOCK_REQUESTS table 
+java.sql.SQLException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=fWH5HZItQgqZ3Nnxp632ng==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1895) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1211) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1209) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683) ~[java.sql:?]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:?]
+	at com.example.SmartInventoryJDBC.getConnection(SmartInventoryJDBC.java:22) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.getAllRestockRequests(SmartInventoryJDBC.java:110) ~[classes/:?]
+	at com.example.SmartInventoryJDBC.main(SmartInventoryJDBC.java:149) ~[classes/:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: oracle.net.ns.NetException: ORA-12505: Cannot connect to database. SID XE is not registered with the listener at host localhost port 1521. (CONNECTION_ID=fWH5HZItQgqZ3Nnxp632ng==)
+https://docs.oracle.com/error-help/db/ora-12505/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:938) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:480) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:278) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:365) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3729) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1090) ~[ojdbc17-21.3.0.0.jar:23.8.0.25.04]
+	... 11 more
+2025-06-27 12:32:44,604 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-27 12:32:44,816 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
+2025-06-27 12:32:44,821 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-27 12:32:45,129 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The quantity of Sample Product (Qty: 50) is low
+2025-06-27 12:32:45,129 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Stock Movements:
+2025-06-27 12:32:45,424 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:32:45,425 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:32:45,425 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:32:45,425 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:32:45,426 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Restock Requests:
+2025-06-27 12:32:45,490 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Qty: 30, Status: Pending
+2025-06-27 12:36:30,628 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Updated stock for Product ID: 101 | Rows affected: 1
+2025-06-27 12:36:30,740 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Logged IN movement for Product ID: 101
+2025-06-27 12:36:30,742 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+Low Stock Items:
+2025-06-27 12:36:30,923 [com.example.SmartInventoryJDBC.main()] WARN  com.example.SmartInventoryJDBC - The quantity of Sample Product (Qty: 50) is low
+2025-06-27 12:36:30,923 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Stock Movements:
+2025-06-27 12:36:31,079 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,080 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,080 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,080 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,081 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Type: IN, Qty: 20
+2025-06-27 12:36:31,081 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - 
+All Restock Requests:
+2025-06-27 12:36:31,234 [com.example.SmartInventoryJDBC.main()] INFO  com.example.SmartInventoryJDBC - Product ID: 101, Qty: 30, Status: Pending
